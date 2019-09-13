@@ -2,8 +2,8 @@ import { Action } from '@ngrx/store';
 import { User } from '../model/user.model';
 
 export enum AuthActionTypes {
-  LoginAction = '[Auth] Load Auths',
-  LogoutAction = '[Auth] Load Auths',
+  LoginAction = '[Login] Action ',
+  LogoutAction = '[Logout] Action',
   
   
 }
@@ -15,5 +15,12 @@ export class Login implements Action {
   }
 }
 
+export class Logout implements Action {
+  readonly type = AuthActionTypes.LogoutAction;
+  constructor(){
 
-export type AuthActions = Login;
+  }
+}
+
+
+export type AuthActions = Login | Logout;
